@@ -146,3 +146,96 @@ if (n == 100) {
   console.log('Sólo un número normal');
 }
 ```
+
+# Javascript - Week 2
+# Excersices CodeWars
+## Multiply
+```
+function multiply(a, b){
+return   a * b
+}
+```
+## ASCII Total exercise
+```
+function uniTotal (string) {
+ let total = 0;
+  for (let i of string ){
+    total += i.charCodeAt()
+  }
+  return total
+}
+```
+# Char From ASCII Value exercise
+
+```
+function getChar(c){
+   return String.fromCharCode(c)
+}
+```
+# Binary Addition exercis
+
+```
+function addBinary(a,b) {
+  return (a + b).toString(2)
+}
+```
+
+# Binary Addition exercise
+
+```
+function finalGrade (exam, projects) {
+  if(exam > 90 || projects > 10) return 100
+  if(exam > 75 && projects >= 5) return 90
+  if (exam > 50 && projects >= 2) return 75
+   return 0
+}
+```
+
+# Thursday 28 of July of 2022
+
+## Remove All Exclamation Marks From The End Of Sentence
+
+```
+function remove (string) {  
+  return string.replace(/!+$/,'');
+}
+```
+## Vowel Remover
+
+```
+function shortcut (string) {
+  return string.replace(/[aeiou]/g,'');
+}
+```
+# Rock Paper Scissors!
+```
+const rps = (p1, p2) => {
+  const rules = { rock: 'scissors', paper: 'rock', scissors: 'paper' }
+  if( p1 === p2 ) return "Draw!"
+  if( p2 === rules[p1]) {
+    return 'Player 1 won!';
+  }else {
+    return 'Player 2 won!';
+  } 
+};
+```
+
+# Persistent Bugger exercise
+
+```
+function persistence(num) {
+   let countOneNumber = 0;
+  num = num.toString()
+    while(num.length > 1){
+      countOneNumber++
+     num =  num
+       .split('')
+         .map((z) => Number(z))
+         .reduce((a,b) => a * b )
+         .toString()
+    }
+    return countOneNumber 
+  
+}
+```
+
