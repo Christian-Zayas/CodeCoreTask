@@ -422,4 +422,4 @@ var encryptThis = function (text) {
 	
 ```
 	
-[![Challenge](https://img.shields.io/badge/Cristian%20Jos%C3%A9%20Zayas-1st%20Core%20Challenge-green)](https://shields.io/)
+[![Challenge](https://img.shields.io/badge/Cristian%20Jos%C3%A9%20Zayas-1st%20Core%20Challenge-green)](https://github.com/Christian-Zayas/CodeCoreTask/blob/main/AboutREADME.md)
