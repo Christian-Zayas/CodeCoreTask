@@ -1,5 +1,5 @@
 
-# Tasks of Cristian José Zayas Arieta
+# Tasks of Cristian José Zayas Arieta  👨🏻‍💻
 
 
 
@@ -147,7 +147,7 @@ if (n == 100) {
 }
 ```
 
-# Javascript - Week 2
+# Javascript - Week 2 🗓
 # Excersices CodeWars
 ## Multiply
 ```
@@ -239,3 +239,187 @@ function persistence(num) {
 }
 ```
 
+# Holiday VIII - Duty Free
+
+```
+return Math.floor(hol / ((discount * normPrice) / 100));
+```
+
+# Twice As Old 
+```
+return Math.abs(dadYearsOld - 2 * sonYearsOld)
+```
+# Valid Spacing
+
+```
+{if(s.charAt(0) === ' ' || s.charAt(s.length - 1) === ' ') { 
+     return false;
+  }
+  
+  for(let i = 0; i < s.length; i++) {
+    if(s.charAt(i) === ' '){ 
+      if(i != 0 && s.charAt(i-1) === ' ') {
+        return false;
+      }
+      if(i != (s.length - 1) && s.charAt(i+1) === ' ') {
+        return false;
+      }
+    }
+  }
+  return true;
+} 
+  ```
+
+# Fake Binary
+
+```
+	function fakeBin(x){
+let verifyDigits = '';
+  for (let i = 0; i < x.length; i++) {
+    if (parseInt(x[i]) < 5) {
+      verifyDigits = verifyDigits + '0';
+    } else {
+      verifyDigits = verifyDigits + '1';
+    }
+  }
+  return verifyDigits;
+}
+```
+
+## Javascript - Week 3 🗓
+# Who Likes It?
+```
+function likes(names) {
+    names = names || [];
+  switch(names.length){
+    case 0: return 'no one likes this'; break;
+    case 1: return names[0] + ' likes this'; break;
+    case 2: return names[0] + ' and ' + names[1] + ' like this'; break;
+    case 3: return names[0] + ', ' + names[1] + ' and ' + names[2] + ' like this'; break;
+    default: return names[0] + ', ' + names[1] + ' and ' + (names.length - 2) + ' others like this';
+  }
+}
+```
+# Bit Counting
+
+```
+	var countBits = function(n) {
+ return n.toString(2)
+  .split('')
+  .reduce((total, val) => total + Number(val), 0)
+};
+```
+# Your order, please
+
+```
+	function order(words){
+  let wordsArray = words.split(' ');
+  wordsArray = wordsArray.sort(
+    (w1, w2) => Number(w1.replace(/\D/g, '')) - Number(w2.replace(/\D/g, ''))
+  );
+  return wordsArray.join(' ');
+}
+	```
+
+# Simple Pig Latin
+
+```function pigIt(str){
+  let newStrr = ['!', '¡', '?', '¿', '.', ',', ':', ';'];
+  let array = str.split(" ");
+  for (let i = 0; i < array.length; i++){
+    if(newStrr.indexOf(array[i]) >= 0) continue;
+    array[i] =   array[i].slice(1) + array[i].slice(0,1) + "ay"; 
+  } 
+  return array.join(' ')
+}```
+
+# Counting Duplicates
+
+```function duplicateCount(text){
+  return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
+}```
+
+# Decode The Morse Code
+
+```decodeMorse = function(morseCode){
+  morseCode = morseCode.replace(/   /g, '#');
+  let decodedCode = '';
+  let tempWordToDecode = '';
+  for (let i = 0, lenght = morseCode.length; i < lenght; i++) {
+    if (morseCode[i] === ' ') {
+      decodedCode += MORSE_CODE[tempWordToDecode] || '';
+      tempWordToDecode = '';
+    } else if (morseCode[i] === '#') {
+      decodedCode += `${MORSE_CODE[tempWordToDecode] || ''} `;
+      tempWordToDecode = '';
+    } else {
+      tempWordToDecode += morseCode[i];
+    }
+  }
+  decodedCode += MORSE_CODE[tempWordToDecode] || '';
+  return decodedCode.trim();
+}```
+
+# Valid Parentheses
+
+```function validParentheses(parens) {
+   var indent = 0;
+  
+  for (var i = 0 ; i < parens.length && indent >= 0; i++) {
+    indent += (parens[i] == '(') ? 1 : -1;    
+  }
+  
+  return (indent == 0);
+}
+```
+
+# Convert string to camel case
+
+```
+function toCamelCase(str){
+let result = '';
+  for (let i = 0; i < str.length; i++) {
+    if (i != 0 && (str[i - 1] === '_' || str[i - 1] === '-')) {
+      result += str[i].toUpperCase();
+    } else if (str[i] != '-' && str[i] != '_') {
+      result += str[i];
+    }
+  }
+  return result;
+}
+```
+# Unique In Order
+```var uniqueInOrder=function(iterable){
+    return [...iterable].filter((a, i) => a !== iterable[i-1])
+}
+```
+	
+# Fold An Array
+	
+```
+function foldArray(a, n)
+{
+ const r = [], c = a.slice();
+  while (c.length) r.push(c.pop() + (c.shift() || 0));
+  return n - 1 ? foldArray(r, n - 1) : r;
+}
+```
+# Encrypt this!
+
+```
+	function encryptedWord(word) {
+  if (word.length == 1) return word.charCodeAt();
+  if (word.length == 2) return `${word.charCodeAt(0)}${word[1]}`;
+  return `${word.charCodeAt(0)}${word[word.length - 1]}${word.slice(
+    2,
+    word.length - 1
+  )}${word[1]}`;
+}
+
+var encryptThis = function (text) {
+  return text.split(' ').map(encryptedWord).join(' ');
+};
+	
+```
+	
+[![Challenge](https://img.shields.io/badge/Cristian%20Jos%C3%A9%20Zayas-1st%20Core%20Challenge-green)](https://shields.io/)
